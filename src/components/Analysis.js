@@ -48,10 +48,10 @@ const Analysis = () => {
                 <section key={data.id} className="bg-white rounded-2xl border border-[#EDF2F7] p-3">
                     <div className="flex items-center justify-between">
                         <div className="p-2 rounded-full border border-[#E6E6E6]">
-                            <Image src={data.logo} width={20} height={20} alt="icon" />
+                            <Image src={data.logo} width={20} height={20} alt="icon" loading="lazy" />
                         </div>
                         <div>
-                            <Image src={data.graph} width={100} height={100} alt="graph" />
+                            <Image src={data.graph} width={100} height={100} alt="graph" loading="lazy" />
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ const Analysis = () => {
 
                     <div className="flex items-center justify-between gap-2">
                         <div className={`px-2 py-1 rounded-full flex items-center justify-center gap-1 ${getBackgroundColor(data.arrow)}`}>
-                            <Image src={data.arrow} width={12} height={12} alt="arrow" />
+                            <Image src={data.arrow} width={12} height={12} alt="arrow" loading="lazy" />
                             <span className="text-[12px] text-[#34CAA5] font-normal">23.5%</span>
                         </div>
 
