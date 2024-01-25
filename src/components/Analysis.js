@@ -43,10 +43,10 @@ const Analysis = () => {
     
 
     return (
-        <main className="w-[39%] grid grid-cols-2 gap-2">
+        <main className="w-full lg:w-[39%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-2">
             {analysis.map((data) => (
                 <section key={data.id} className="bg-white rounded-2xl border border-[#EDF2F7] p-3">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-4">
                         <div className="p-2 rounded-full border border-[#E6E6E6]">
                             <Image src={data.logo} width={20} height={20} alt="icon" loading="lazy" />
                         </div>
@@ -56,17 +56,17 @@ const Analysis = () => {
                     </div>
 
                     <div className="flex flex-col gap-1 my-4">
-                        <h2 className="text-[18px] text-[#898989] font-normal">Total Order</h2>
-                        <h1 className="text-[24px] text-[#3A3F51] font-medium">{data.total_order}</h1>
+                        <h2 className="text-[16px] md:text-[18px] text-[#898989] font-normal">Total Order</h2>
+                        <h1 className="text-[20px] md:text-[24px] text-[#3A3F51] font-medium">{data.total_order}</h1>
                     </div>
 
                     <div className="flex items-center justify-between gap-2">
                         <div className={`px-2 py-1 rounded-full flex items-center justify-center gap-1 ${getBackgroundColor(data.arrow)}`}>
                             <Image src={data.arrow} width={12} height={12} alt="arrow" loading="lazy" />
-                            <span className="text-[12px] text-[#34CAA5] font-normal">23.5%</span>
+                            <span className="text-[10px] md:text-[12px] lg:text-[10px] xl:text-[12px] text-[#34CAA5] font-normal">23.5%</span>
                         </div>
 
-                        <p className="text-[14px] text-[#606060] font-normal">vs. previous month</p>
+                        <p className="text-[12px] md:text-[14px] lg:text-[10px] xl:text-[14px] text-[#606060] font-normal">vs. previous month</p>
                     </div>
                 </section>
             ))}

@@ -1,6 +1,6 @@
 const Chart = () => {
     return ( 
-        <main className="bg-white h-96 w-[60%] border border-[#EDF2F7] rounded-2xl">
+        <main className="bg-white h-96 w-auto lg:w-[750px] border border-[#EDF2F7] rounded-2xl">
 
         </main>
      );
