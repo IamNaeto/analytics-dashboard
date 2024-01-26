@@ -49,7 +49,7 @@ const SideBar = ({ menu, setMenu }) => {
     ]
     return (
         <main className={`fixed h-screen z-50 backdrop-blur w-full md:w-[80px] ${menu ? "block md:block" : 'hidden md:block'}`}>
-            <section className="w-[80px] md:w-full h-screen flex flex-col items-center justify-between bg-[#F7F8FA] border border-r-[#EBECF2] ">
+            <section className="w-[80px] md:w-full h-screen flex flex-col items-center justify-start gap-4 sm:gap-0 sm:justify-between bg-[#F7F8FA] border border-r-[#EBECF2] ">
                 <section>
                     <div className="p-4 mb-2 flex items-center justify-center w-full">
                         <Image src="/img/logo.png" width={40} height={40} alt="logo" loading="lazy" />
@@ -74,7 +74,7 @@ const SideBar = ({ menu, setMenu }) => {
                     ))}
                 </section>
 
-                <FaWindowClose className="absolute left-20 top-6 block md:hidden text-[#34CAA5] text-[30px] mb-4 cursor-pointer"  onClick={toggleSideBar} />
+                <FaWindowClose className="block md:hidden text-[#34CAA5] text-[30px] mb-4 cursor-pointer"  onClick={toggleSideBar} />
             </section>
         </main>
     );
