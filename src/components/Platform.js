@@ -11,7 +11,7 @@ const Platform = () => {
             <section className="grid gap-4">
                 <div className="grid gap-2">
                     <h1 className="text-[#22242C] text-[16px] md:text-[18px] font-medium">Book Bazaar</h1>
-                    <div className="w-full h-[12px] bg-[#F5F5F5] rounded-2xl">
+                    <div className="w-full h-[8px] sm:h-[12px] bg-[#F5F5F5] rounded-2xl">
                         <div className="w-[50%] h-full bg-[#6160DC] rounded-2xl"></div>
                     </div>
 
@@ -23,7 +23,7 @@ const Platform = () => {
 
                 <div className="grid gap-2">
                     <h1 className="text-[#22242C] text-[16px] md:text-[18px] font-medium">Artisan Aisle</h1>
-                    <div className="w-full h-[12px] bg-[#F5F5F5] rounded-2xl">
+                    <div className="w-full h-[8px] sm:h-[12px] bg-[#F5F5F5] rounded-2xl">
                         <div className="w-[35%] h-full bg-[#54C5EB] rounded-2xl"></div>
                     </div>
 
@@ -35,7 +35,7 @@ const Platform = () => {
 
                 <div className="grid gap-2">
                     <h1 className="text-[#22242C] text-[16px] md:text-[18px] font-medium">Toy Troop</h1>
-                    <div className="w-full h-[12px] bg-[#F5F5F5] rounded-2xl">
+                    <div className="w-full h-[8px] sm:h-[12px] bg-[#F5F5F5] rounded-2xl">
                         <div className="w-[25%] h-full bg-[#FFB74A] rounded-2xl"></div>
                     </div>
 
@@ -47,7 +47,7 @@ const Platform = () => {
 
                 <div className="grid gap-2">
                     <h1 className="text-[#22242C] text-[16px] md:text-[18px] font-medium">XStore</h1>
-                    <div className="w-full h-[12px] bg-[#F5F5F5] rounded-2xl">
+                    <div className="w-full h-[8px] sm:h-[12px] bg-[#F5F5F5] rounded-2xl">
                         <div className="w-[25%] h-full bg-[#FF4A55] rounded-2xl"></div>
                     </div>
 

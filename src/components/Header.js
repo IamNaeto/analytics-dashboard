@@ -8,7 +8,7 @@ const Header = ({ menu, setMenu }) => {
       };
 
     return (
-        <nav className="fixed top-0 z-30 w-full bg-[#FAFAFA] py-4 px-4 flex flex-col xl:flex-row items-center justify-between border-2 border-b-[#E5EAEF] pr-auto md:pr-[100px] xl:pr-0 gap-4 xl:gap-0">
+        <nav className="fixed top-0 z-30 w-full py-4 px-4 flex flex-col xl:flex-row items-center justify-between border-2 border-b-[#E5EAEF] backdrop-blur-2xl pr-auto md:pr-[100px] xl:pr-0 gap-4 xl:gap-0">
             <section className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
                 <div className="flex items-center justify-between w-full md:w-auto">
                     <Link href={"/aside"}><h1 className="text-[20px] text-[#26282C] font-bold">Dashboard</h1></Link>
