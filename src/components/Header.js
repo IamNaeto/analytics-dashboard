@@ -18,7 +18,7 @@ const Header = ({ menu, setMenu, theme }) => {
       const arrowIcon = theme === "dark" ? arrowdownWhite :  arrowDown ;
 
     return (
-        <nav className={`fixed top-0 z-30 w-full ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} py-4 px-4 flex flex-col xl:flex-row items-center justify-between border-2 border-[black] ${theme === 'dark' ? 'border-b-[#374151]' : 'border-b-[#E5EAEF]'} backdrop-blur-2xl pr-auto md:pr-[100px] xl:pr-0 gap-4 xl:gap-0`}>
+        <nav className={`fixed top-0 z-30 w-full ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} py-4 px-4 flex flex-col xl:flex-row items-center justify-between border-2 ${theme === 'dark' ? 'border-[#374151]' : 'border-[#E5EAEF]'} backdrop-blur-2xl pr-auto md:pr-[100px] xl:pr-0 gap-4 xl:gap-0`}>
             <section className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
                 <div className="flex items-center justify-between w-full md:w-auto">
                     <Link href={"/aside"}><h1 className={`text-[20px] font-bold ${theme === 'dark' ? 'text-white' : 'text-[#26282C]'}`}>Dashboard</h1></Link>

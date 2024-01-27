@@ -66,7 +66,7 @@ const SideBar = ({ menu, setMenu, theme, setTheme }) => {
 
   return (
     <main className={`fixed h-screen z-50 backdrop-blur w-full md:w-[80px] ${menu ? "block md:block" : 'hidden md:block'} `}>
-      <section className={`w-[80px] md:w-full h-screen flex flex-col items-center justify-start gap-8 sm:gap-0 sm:justify-between ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} border border-[black] ${theme === 'dark' ? 'border-r-[#374151]' : 'border-r-[#EBECF2]'}`}>
+      <section className={`w-[80px] md:w-full h-screen flex flex-col items-center justify-start gap-8 sm:gap-0 sm:justify-between ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} border ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EBECF2]'}`}>
         <section>
           <div className="p-4 mb-2 flex items-center justify-center w-full">
             <Image src="/img/logo.png" width={40} height={40} alt="logo" loading="lazy" />
