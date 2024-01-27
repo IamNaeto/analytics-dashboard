@@ -26,7 +26,7 @@ const Header = ({ menu, setMenu, theme }) => {
                 </div>
 
                 <div className="relative">
-                    <input type="search" placeholder="Search..." className={`pl-8 py-2 px-4 text-[16px] border ${theme === 'dark' ? 'border-[#202020] text-[#202020]' : 'border-[#E5EAEF] text-gray-600'} ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} rounded-full outline-none`}/>
+                    <input type="search" placeholder="Search..." className={`pl-8 py-2 px-4 text-[16px] border ${theme === 'dark' ? 'border-[#202020] text-white' : 'border-[#E5EAEF] text-gray-800'} ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} rounded-full outline-none`}/>
                     <Image src="/img/search.png" width={17} height={17} alt="search" loading="lazy" className="absolute left-2 top-3" />
                 </div>
             </section>

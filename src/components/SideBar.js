@@ -25,7 +25,7 @@ const SideBar = ({ menu, setMenu, theme, setTheme }) => {
   const icons = [
     {
       id: 1,
-      src: "/img/category.png",
+      src: theme === "dark" ? "/img/category-lite.png" : "/img/category.png",
     },
     {
       id: 2,
