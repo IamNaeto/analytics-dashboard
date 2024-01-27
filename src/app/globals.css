@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-  border: 2px solid red;
-} */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
 
 /* custom scroll bar */
 ::-webkit-scrollbar {

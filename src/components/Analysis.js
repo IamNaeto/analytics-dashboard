@@ -1,5 +1,5 @@
 import Image from "next/image";
-const Analysis = () => {
+const Analysis = ({theme}) => {
     const analysis = [
         {
             id: 1,
@@ -45,7 +45,7 @@ const Analysis = () => {
     return (
         <main className="w-full xl:w-[39%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-2">
             {analysis.map((data) => (
-                <section key={data.id} className="bg-white rounded-2xl border border-[#EDF2F7] p-3">
+                <section key={data.id} className={`${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'} rounded-2xl border p-3`}>
                     <div className="flex items-center justify-between gap-4">
                         <div className="p-2 rounded-full border border-[#E6E6E6]">
                             <Image src={data.logo} width={20} height={20} alt="icon" loading="lazy" />
@@ -57,7 +57,7 @@ const Analysis = () => {
 
                     <div className="flex flex-col gap-1 my-4">
                         <h2 className="text-[16px] md:text-[18px] text-[#898989] font-normal">Total Order</h2>
-                        <h1 className="text-[20px] md:text-[24px] text-[#3A3F51] font-medium">{data.total_order}</h1>
+                        <h1 className={`text-[20px] md:text-[24px] ${theme === 'dark' ? 'text-white' : 'text-[#3A3F51]'} font-medium`}>{data.total_order}</h1>
                     </div>
 
                     <div className="flex items-center justify-between gap-2">

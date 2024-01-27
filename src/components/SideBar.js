@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { FaWindowClose } from "react-icons/fa";
-import { useState } from "react";
 import light from "../../public/img/light.png";
 import activeLight from "../../public/img/active-light.png";
 import dark from "../../public/img/dark.png";
 import activeDark from "../../public/img/active-dark.png";
 
-const SideBar = ({ menu, setMenu }) => {
-  const [theme, setTheme] = useState("light");
+const SideBar = ({ menu, setMenu, theme, setTheme }) => {
 
   const lightIcon = theme === "dark" ? light : activeLight;
   const moonIcon = theme === "dark" ? activeDark : dark;
@@ -67,8 +65,8 @@ const SideBar = ({ menu, setMenu }) => {
   ];
 
   return (
-    <main className={`fixed h-screen z-50 backdrop-blur w-full md:w-[80px] ${menu ? "block md:block" : 'hidden md:block'}`}>
-      <section className={`w-[80px] md:w-full h-screen flex flex-col items-center justify-start gap-8 sm:gap-0 sm:justify-between ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} border border-r-${theme === 'dark' ? 'black' : '#EBECF2'}`}>
+    <main className={`fixed h-screen z-50 backdrop-blur w-full md:w-[80px] ${menu ? "block md:block" : 'hidden md:block'} `}>
+      <section className={`w-[80px] md:w-full h-screen flex flex-col items-center justify-start gap-8 sm:gap-0 sm:justify-between ${theme === 'dark' ? 'bg-black' : 'bg-[#f7f8fa]'} border ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EBECF2]'}`}>
         <section>
           <div className="p-4 mb-2 flex items-center justify-center w-full">
             <Image src="/img/logo.png" width={40} height={40} alt="logo" loading="lazy" />
@@ -79,7 +77,7 @@ const SideBar = ({ menu, setMenu }) => {
             </div>
           ))}
 
-          <div className={`mx-4 py-4 mb-4 flex flex-col items-center justify-center gap-3 md:gap-5 transition-all delay-150 ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} rounded-full`}>
+          <div className={`mx-4 py-4 mb-4 flex flex-col items-center justify-center border gap-3 md:gap-5 transition-all delay-150 ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EBECF2]'} rounded-full`}>
             <Image src={lightIcon} width={20} height={20} alt="icon" loading="lazy" className="cursor-pointer" onClick={toggleLight} />
             <Image src={moonIcon} width={20} height={20} alt="icon" loading="lazy" className="cursor-pointer" onClick={toggleDark} />
           </div>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-const Orders = () => {
+import download from "../../public/img/download.png"
+import downloadWhite from "../../public/img/download-white.png"
+const Orders = ({theme}) => {
     const orderDetails = [
         {
             id: 1,
@@ -54,11 +56,13 @@ const Orders = () => {
         }
     };
 
+    const downloadIcon = theme === "dark" ? downloadWhite :  download ;
+
     return (
-        <main className="grid gap-4 bg-white w-full lg:w-[750px] rounded-2xl border border-[#EDF2F7] p-4 overflow-x-scroll md:overflow-hidden">
-            <section className="grid gap-4 w-full rounded-2xl">
+        <main className={`${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'} grid gap-4 w-full lg:w-[750px] rounded-2xl border overflow-x-scroll md:overflow-hidden`}>
+            <section className="grid gap-4 p-4 w-full rounded-2xl">
                 <section className="flex items-center justify-between">
-                    <h1 className="text-[16px] md:text-[18px] text-[#26282C] font-semibold">Last Orders</h1>
+                    <h1 className={`text-[16px] md:text-[18px] font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#26282C]'}`}>Last Orders</h1>
 
                     <Link href={"/"} className="text-[16px] md:text-[18px] text-[#34CAA5] font-medium">See All</Link>
                 </section>
@@ -76,16 +80,16 @@ const Orders = () => {
                         <div key={orderDetail.id} className="flex items-center justify-between w-full py-2 border-b border-b-[#EDF2F6] mb-2">
                             <div className=" w-[200px] flex items-center gap-1">
                                 <Image src={orderDetail.img} width={30} height={30} alt="user" loading="lazy" />
-                                <h1 className="text-[14px] md:text[16px] text-[#3A3F51] font-medium">{orderDetail.name}</h1>
+                                <h1 className={`text-[14px] md:text-[16px]  font-medium ${theme === 'dark' ? 'text-white' : 'text-[#3A3F51]'}`}>{orderDetail.name}</h1>
                             </div>
 
                             <h1 className="text-[#737373] text-[14px] md:text-[16px] font-normal w-[110px]">{orderDetail.date}</h1>
-                            <h1 className="text-[#0D062D] text-[14px] md:text-[16px] font-normal w-[100px]">{orderDetail.amount}</h1>
+                            <h1 className={`${theme === 'dark' ? 'text-white' : 'text-[#0D062D]'} text-[14px] md:text-[16px] font-normal w-[100px]`}>{orderDetail.amount}</h1>
                             <h1 className={`text-[14px] md:text-[16px] font-normal w-[100px] ${getStatusColor(orderDetail.status)}`}>{orderDetail.status}</h1>
 
                             <div className="w-[100px] flex items-center gap-1">
-                                <Image src="/img/download.png" width={20} height={18} alt="download" loading="lazy" />
-                                <h1 className="text-[12px] md:text-[14px] text-[#0D062D] font-normal">View</h1>
+                                <Image src={downloadIcon} width={20} height={18} alt="download" loading="lazy" />
+                                <h1 className={`text-[12px] md:text-[14px] font-normal ${theme === 'dark' ? 'text-white' : 'text-[#0D062D]'}`}>View</h1>
                             </div>
                         </div>
                     ))}
