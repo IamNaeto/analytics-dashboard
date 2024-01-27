@@ -148,7 +148,7 @@ const variants = {
 
 const Charts = ({ theme }) => {
     return (
-        <div className={`h-96 w-auto xl:w-[750px] border rounded-2xl p-5 text-[16px] ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'}`}>
+        <div className={`h-96 w-full xl:w-[60%] border rounded-2xl p-5 text-[16px] ${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'}`}>
             <div className={`flex justify-between ${theme === 'dark' ? 'text-white' : 'border-black'}`}>
                 <p className="font-semibold">Sales Trends</p>
                 <div className="flex items-center gap-3">

@@ -59,7 +59,7 @@ const Orders = ({theme}) => {
     const downloadIcon = theme === "dark" ? downloadWhite :  download ;
 
     return (
-        <main className={`${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'} grid gap-4 w-full lg:w-[750px] rounded-2xl border overflow-x-scroll md:overflow-hidden`}>
+        <main className={`${theme === 'dark' ? 'bg-[#202020]' : 'bg-white'} ${theme === 'dark' ? 'border-[#374151]' : 'border-[#EDF2F7]'} grid gap-4 w-full lg:w-[60%] rounded-2xl border overflow-x-scroll md:overflow-hidden`}>
             <section className="grid gap-4 p-4 w-full rounded-2xl">
                 <section className="flex items-center justify-between">
                     <h1 className={`text-[16px] md:text-[18px] font-semibold ${theme === 'dark' ? 'text-white' : 'text-[#26282C]'}`}>Last Orders</h1>
