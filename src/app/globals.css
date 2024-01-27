@@ -9,6 +9,8 @@
 /* custom scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
+  height: 4px;
+  
 }
 
 ::-webkit-scrollbar-track {
@@ -18,4 +20,12 @@
 
 ::-webkit-scrollbar-thumb {
   background: #34CAA5;
+}
+
+.logo {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Adjust the scale factor as needed */
 }

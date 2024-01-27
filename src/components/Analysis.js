@@ -43,7 +43,7 @@ const Analysis = () => {
     
 
     return (
-        <main className="w-full lg:w-[39%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 gap-2">
+        <main className="w-full xl:w-[39%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-2">
             {analysis.map((data) => (
                 <section key={data.id} className="bg-white rounded-2xl border border-[#EDF2F7] p-3">
                     <div className="flex items-center justify-between gap-4">
